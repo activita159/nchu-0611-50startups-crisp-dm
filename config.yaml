@@ -1,0 +1,73 @@
+project:
+  name: "Kaggle 50 Startups CRISP-DM Expert Discussion Framework"
+  version: "1.0"
+  objective: "透過五位領域專家多輪討論，從商業與資料科學角度分析 50 Startups Dataset 中影響 Profit 的主要因素，並形成可用於 CRISP-DM 報告的決策共識。"
+
+dataset:
+  name: "50 Startups"
+  url: "https://raw.githubusercontent.com/arunkumar413/50_Startups/master/50_Startups.csv"
+  records: 50
+  target_variable: "Profit"
+  features:
+    - name: "R&D Spend"
+      type: numerical
+      description: "研發支出"
+    - name: "Administration"
+      type: numerical
+      description: "行政管理支出"
+    - name: "Marketing Spend"
+      type: numerical
+      description: "行銷支出"
+    - name: "State"
+      type: categorical
+      description: "公司所在地"
+
+experts:
+  - id: RD
+    role: "研發總監"
+    responsibility: ["技術創新", "產品競爭力", "長期價值創造"]
+    assumptions: ["產品品質決定市場競爭力", "技術門檻提高獲利能力", "R&D投入與Profit正相關"]
+    primary_metric: ["R&D Spend", "Patent Potential", "Innovation Index"]
+
+  - id: Marketing
+    role: "行銷總監"
+    responsibility: ["品牌曝光", "市場推廣", "客戶獲取"]
+    assumptions: ["沒有曝光就沒有銷售", "行銷能放大產品價值", "市場佔有率影響Profit"]
+    primary_metric: ["Marketing Spend", "Customer Reach", "Conversion Rate"]
+
+  - id: Administration
+    role: "營運與行政總監"
+    responsibility: ["成本控制", "流程管理", "組織效率"]
+    assumptions: ["浪費會侵蝕獲利", "管理效率提升競爭力", "成本控制有助於穩定經營"]
+    primary_metric: ["Administration", "Cost Efficiency", "Operational Stability"]
+
+  - id: Governor
+    role: "州長"
+    responsibility: ["區域政策", "稅務環境", "人才資源"]
+    assumptions: ["州別影響企業發展", "稅率與法規影響獲利", "地理位置帶來競爭優勢"]
+    primary_metric: ["State", "Tax Rate", "Economic Index"]
+
+  - id: ML_Expert
+    role: "機器學習專家"
+    responsibility: ["資料分析", "模型建構", "統計驗證"]
+    assumptions: ["數據優先於主觀判斷", "模型能揭露真正的重要因子", "需驗證相關性與因果關係"]
+    primary_metric: ["Correlation", "Feature Importance", "R² Score", "RMSE"]
+
+discussion:
+  rounds:
+    - title: "初始觀點陳述"
+      description: "各領域專家基於自身專業，提出對影響 Profit 因素的初始觀點"
+    - title: "探索性資料分析 (EDA)"
+      description: "透過資料視覺化與統計分析，驗證各專家的初始假設"
+    - title: "機器學習建模"
+      description: "建立預測模型，以量化方式評估各變數的重要性"
+    - title: "挑戰與驗證"
+      description: "針對分析結果提出潛在限制與挑戰，進行批判性思考"
+    - title: "最終共識"
+      description: "綜合所有分析結果，形成企業決策建議"
+
+output:
+  report_dir: "output"
+  figures_dir: "output/figures"
+  models_dir: "output/models"
+  report_file: "CRISP_DM_Report.md"
