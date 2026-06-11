@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    margin: 0; width: 1920px; height: 1080px; overflow: hidden;
+    background: #060b14;
+    font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #e0e0e0;
+  }
+</style>
+</head>
+<body>
+<div data-hf-id="hf-jrvh" id="root" data-composition-id="main" data-width="1920" data-height="1080" data-start="0" data-duration="120">
+  <!-- ═══════════════════════════════════════════
+       SCENE BACKGROUND LAYERS
+       ═══════════════════════════════════════════ -->
+  <div data-hf-id="hf-7tla" id="bg-gradient" class="clip" data-start="0" data-duration="120" data-track-index="51" style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,#112244 0%,#060b14 70%);opacity:0"></div>
+  <div data-hf-id="hf-5qjl" id="bg-grid" class="clip" data-start="0" data-duration="120" data-track-index="52" style="position:absolute;inset:0;opacity:0.06;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:80px 80px"></div>
+
+  <!-- ═══════════════════════════════════════════
+       SCENE 1: TITLE INTRO (0-12s)
+       ═══════════════════════════════════════════ -->
+
+  <!-- Corner accent lines -->
+  <div data-hf-id="hf-dsq0" id="s1-tl" class="clip" data-start="0" data-duration="12" data-track-index="53" style="position:absolute;top:80px;left:100px;width:120px;height:2px;background:#f59e0b;opacity:0"></div>
+  <div data-hf-id="hf-w7mk" id="s1-tr" class="clip" data-start="0" data-duration="12" data-track-index="54" style="position:absolute;top:80px;left:100px;width:2px;height:60px;background:#f59e0b;opacity:0"></div>
+
+  <!-- Main title -->
+  <h1 data-hf-id="hf-zlcf" id="s1-title" class="clip" data-start="0" data-duration="12" data-track-index="55" style="position:absolute;top:280px;left:100px;font-size:96px;font-weight:900;color:#ffffff;line-height:1.15;letter-spacing:4px">
+    50 Startups<br data-hf-id="hf-x5px">
+    <span data-hf-id="hf-ugi1" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent">CRISP-DM</span>
+    <span data-hf-id="hf-6n7m" style="color:#94a3b8;font-size:48px;font-weight:400"> 專家討論框架</span>
+  </h1>
+
+  <!-- Subtitle -->
+  <p data-hf-id="hf-jv9a" id="s1-sub" class="clip" data-start="0" data-duration="12" data-track-index="56" style="position:absolute;top:650px;left:100px;font-size:36px;color:#94a3b8;letter-spacing:2px">
+    什麼因素真正驅動企業利潤？
+  </p>
+
+  <!-- 5 expert labels -->
+  <div data-hf-id="hf-ztwu" id="s1-experts" class="clip" data-start="0" data-duration="12" data-track-index="57" style="position:absolute;bottom:100px;left:100px;display:flex;gap:40px">
+    <span data-hf-id="hf-cveh" style="font-size:20px;color:#64748b;padding:10px 24px;border:1px solid #1e293b;border-radius:4px;letter-spacing:2px">研發總監</span>
+    <span data-hf-id="hf-5eg8" style="font-size:20px;color:#64748b;padding:10px 24px;border:1px solid #1e293b;border-radius:4px;letter-spacing:2px">行銷總監</span>
+    <span data-hf-id="hf-g2rk" style="font-size:20px;color:#64748b;padding:10px 24px;border:1px solid #1e293b;border-radius:4px;letter-spacing:2px">行政總監</span>
+    <span data-hf-id="hf-qh82" style="font-size:20px;color:#64748b;padding:10px 24px;border:1px solid #1e293b;border-radius:4px;letter-spacing:2px">州長</span>
+    <span data-hf-id="hf-vw3l" style="font-size:20px;color:#f59e0b;padding:10px 24px;border:1px solid #f59e0b;border-radius:4px;letter-spacing:2px">ML 專家</span>
+  </div>
+
+  <!-- Scene 1 audio -->
+  <audio data-hf-id="hf-l4ca" id="s1-audio" data-start="0" data-duration="12" data-track-index="2" data-volume="1.0" src="assets/scene1_narration.mp3"></audio>
+
+  <!-- ═══════════════════════════════════════════
+       SCENE 2: BUSINESS CONTEXT (12-24s)
+       ═══════════════════════════════════════════ -->
+
+  <div data-hf-id="hf-slak" id="s2-container" class="clip" data-start="12" data-duration="12" data-track-index="58" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0">
+
+    <h2 data-hf-id="hf-3jcx" style="font-size:64px;font-weight:900;color:#ffffff;margin-bottom:30px;letter-spacing:4px">五個觀點 · 一個真相</h2>
+    <p data-hf-id="hf-cavr" style="font-size:28px;color:#94a3b8;margin-bottom:80px;letter-spacing:2px">50 家新創公司 · 5 項關鍵變數 · 誰才是獲利關鍵？</p>
+
+    <!-- 5 variable cards -->
+    <div data-hf-id="hf-pdkd" style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center;max-width:1400px">
+      <div data-hf-id="hf-pzqm" id="s2-card1" style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:30px 40px;text-align:center;min-width:220px;opacity:0;border-top:3px solid #f59e0b">
+        <div data-hf-id="hf-8p4u" style="font-size:16px;color:#64748b;margin-bottom:12px;letter-spacing:2px">R&amp;D SPEND</div>
+        <div data-hf-id="hf-0hkf" style="font-size:42px;font-weight:900;color:#f59e0b">$73K</div>
+        <div data-hf-id="hf-04s7" style="font-size:16px;color:#475569;margin-top:8px">avg</div>
+      </div>
+      <div data-hf-id="hf-plnb" id="s2-card2" style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:30px 40px;text-align:center;min-width:220px;opacity:0;border-top:3px solid #3b82f6">
+        <div data-hf-id="hf-un4i" style="font-size:16px;color:#64748b;margin-bottom:12px;letter-spacing:2px">MARKETING</div>
+        <div data-hf-id="hf-ngur" style="font-size:42px;font-weight:900;color:#3b82f6">$211K</div>
+        <div data-hf-id="hf-le0n" style="font-size:16px;color:#475569;margin-top:8px">avg</div>
+      </div>
+      <div data-hf-id="hf-x0aq" id="s2-card3" style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:30px 40px;text-align:center;min-width:220px;opacity:0;border-top:3px solid #10b981">
+        <div data-hf-id="hf-tgnx" style="font-size:16px;color:#64748b;margin-bottom:12px;letter-spacing:2px">ADMIN</div>
+        <div data-hf-id="hf-ljxt" style="font-size:42px;font-weight:900;color:#10b981">$121K</div>
+        <div data-hf-id="hf-kzpm" style="font-size:16px;color:#475569;margin-top:8px">avg</div>
+      </div>
+      <div data-hf-id="hf-6pa2" id="s2-card4" style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:30px 40px;text-align:center;min-width:220px;opacity:0;border-top:3px solid #8b5cf6">
+        <div data-hf-id="hf-w3pf" style="font-size:16px;color:#64748b;margin-bottom:12px;letter-spacing:2px">STATE</div>
+        <div data-hf-id="hf-qa7u" style="font-size:42px;font-weight:900;color:#8b5cf6">3</div>
+        <div data-hf-id="hf-fe1y" style="font-size:16px;color:#475569;margin-top:8px">regions</div>
+      </div>
+      <div data-hf-id="hf-8yl9" id="s2-card5" style="background:#0f172a;border:1px solid #f59e0b;border-radius:12px;padding:30px 40px;text-align:center;min-width:220px;opacity:0;border-top:3px solid #ef4444">
+        <div data-hf-id="hf-cyx8" style="font-size:16px;color:#64748b;margin-bottom:12px;letter-spacing:2px">PROFIT</div>
+        <div data-hf-id="hf-cv83" style="font-size:42px;font-weight:900;color:#ef4444">$112K</div>
+        <div data-hf-id="hf-9jj0" style="font-size:16px;color:#475569;margin-top:8px">target</div>
+      </div>
+    </div>
+  </div>
+
+  <audio data-hf-id="hf-v3h7" id="s2-audio" data-start="12" data-duration="12" data-track-index="2" data-volume="1.0" src="assets/scene2_narration.mp3"></audio>
+
+  <!-- ═══════════════════════════════════════════
+       SCENE 3: EDA - CORRELATION (24-40s)
+       ═══════════════════════════════════════════ -->
+
+  <div data-hf-id="hf-z0kg" id="s3-container" class="clip" data-start="24" data-duration="16" data-track-index="59" style="position:absolute;inset:0;display:flex;align-items:center;padding:0 120px;opacity:0">
+
+    <div data-hf-id="hf-kezg" style="flex:1;max-width:900px">
+      <div data-hf-id="hf-6nuy" style="font-size:20px;color:#64748b;letter-spacing:4px;margin-bottom:12px">EXPLORATORY DATA ANALYSIS</div>
+      <h2 data-hf-id="hf-nm8m" style="font-size:56px;font-weight:900;color:#ffffff;margin-bottom:50px;letter-spacing:2px">
+        Profit <span data-hf-id="hf-yig5" style="color:#f59e0b">相關係數</span>矩陣
+      </h2>
+
+      <!-- Correlation bars -->
+      <div data-hf-id="hf-33i5" style="display:flex;flex-direction:column;gap:24px">
+        <div data-hf-id="hf-md0d" id="s3-bar1" style="opacity:0">
+          <div data-hf-id="hf-umyj" style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:20px">
+            <span data-hf-id="hf-5se5" style="color:#f59e0b;font-weight:700">R&amp;D Spend</span>
+            <span data-hf-id="hf-s2zz" id="s3-val1" style="color:#f59e0b;font-weight:900;font-size:36px">0.00</span>
+          </div>
+          <div data-hf-id="hf-ivks" style="height:8px;width:100%;background:#1e293b;border-radius:4px;overflow:hidden">
+            <div data-hf-id="hf-otpj" id="s3-bar1-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#f59e0b,#fbbf24);border-radius:4px"></div>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-n54u" id="s3-bar2" style="opacity:0">
+          <div data-hf-id="hf-phtn" style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:20px">
+            <span data-hf-id="hf-lqkn" style="color:#3b82f6;font-weight:700">Marketing Spend</span>
+            <span data-hf-id="hf-0ajk" id="s3-val2" style="color:#3b82f6;font-weight:900;font-size:36px">0.00</span>
+          </div>
+          <div data-hf-id="hf-7ej8" style="height:8px;width:100%;background:#1e293b;border-radius:4px;overflow:hidden">
+            <div data-hf-id="hf-5vsp" id="s3-bar2-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#3b82f6,#60a5fa);border-radius:4px"></div>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-0d4f" id="s3-bar3" style="opacity:0">
+          <div data-hf-id="hf-p3im" style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:20px">
+            <span data-hf-id="hf-9u77" style="color:#64748b;font-weight:700">Administration</span>
+            <span data-hf-id="hf-7857" id="s3-val3" style="color:#64748b;font-weight:900;font-size:36px">0.00</span>
+          </div>
+          <div data-hf-id="hf-67m5" style="height:8px;width:100%;background:#1e293b;border-radius:4px;overflow:hidden">
+            <div data-hf-id="hf-0tcn" id="s3-bar3-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#475569,#64748b);border-radius:4px"></div>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-hj4h" id="s3-bar4" style="opacity:0;margin-top:20px">
+          <div data-hf-id="hf-op7l" style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:20px">
+            <span data-hf-id="hf-ew83" style="color:#475569;font-weight:700">State</span>
+            <span data-hf-id="hf-izx8" id="s3-val4" style="color:#475569;font-weight:900;font-size:36px">~0.05</span>
+          </div>
+          <div data-hf-id="hf-6lx6" style="height:8px;width:100%;background:#1e293b;border-radius:4px;overflow:hidden">
+            <div data-hf-id="hf-cfb8" id="s3-bar4-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#334155,#475569);border-radius:4px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Big callout number -->
+    <div data-hf-id="hf-imyp" id="s3-callout" style="flex:0 0 500px;text-align:center;opacity:0">
+      <div data-hf-id="hf-m4th" style="font-size:180px;font-weight:900;color:#f59e0b;line-height:1">0.97</div>
+      <div data-hf-id="hf-d00k" style="font-size:28px;color:#94a3b8;letter-spacing:2px;margin-top:-10px">
+        R&amp;D 與 Profit 高度正相關
+      </div>
+    </div>
+  </div>
+
+  <audio data-hf-id="hf-enqy" id="s3-audio" data-start="24" data-duration="16" data-track-index="2" data-volume="1.0" src="assets/scene3_narration.mp3"></audio>
+
+  <!-- ═══════════════════════════════════════════
+       SCENE 4: MODEL COMPARISON (40-56s)
+       ═══════════════════════════════════════════ -->
+
+  <div data-hf-id="hf-su09" id="s4-container" class="clip" data-start="40" data-duration="16" data-track-index="60" style="position:absolute;inset:0;display:flex;align-items:center;padding:0 120px;opacity:0">
+
+    <div data-hf-id="hf-o6lj" style="flex:1">
+      <div data-hf-id="hf-zlpz" style="font-size:20px;color:#64748b;letter-spacing:4px;margin-bottom:12px">MACHINE LEARNING MODELING</div>
+      <h2 data-hf-id="hf-af97" style="font-size:56px;font-weight:900;color:#ffffff;margin-bottom:50px;letter-spacing:2px">
+        三模型 <span data-hf-id="hf-906q" style="color:#3b82f6">交叉驗證</span>
+      </h2>
+
+      <!-- Model cards -->
+      <div data-hf-id="hf-jt33" style="display:flex;gap:24px">
+        <!-- LR -->
+        <div data-hf-id="hf-gnoj" id="s4-model1" style="flex:1;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:32px;opacity:0;text-align:center">
+          <div data-hf-id="hf-w1jr" style="font-size:16px;color:#64748b;letter-spacing:2px;margin-bottom:8px">LINEAR REGRESSION</div>
+          <div data-hf-id="hf-lx2h" id="s4-r2-1" style="font-size:72px;font-weight:900;color:#94a3b8;line-height:1">.000</div>
+          <div data-hf-id="hf-iv1w" style="font-size:18px;color:#475569">R² Score</div>
+          <div data-hf-id="hf-66lq" style="font-size:14px;color:#64748b;margin-top:12px">CV: 0.928 ± 0.044</div>
+        </div>
+
+        <!-- RF (best) -->
+        <div data-hf-id="hf-xsoj" id="s4-model2" style="flex:1;background:#0f172a;border:1px solid #f59e0b;border-radius:12px;padding:32px;opacity:0;text-align:center">
+          <div data-hf-id="hf-95f6" style="display:inline-block;background:#f59e0b;color:#000;font-size:12px;font-weight:900;padding:4px 12px;border-radius:4px;margin-bottom:8px;letter-spacing:2px">BEST</div>
+          <div data-hf-id="hf-d6yx" style="font-size:16px;color:#64748b;letter-spacing:2px;margin-bottom:8px">RANDOM FOREST</div>
+          <div data-hf-id="hf-40de" id="s4-r2-2" style="font-size:72px;font-weight:900;color:#f59e0b;line-height:1">.000</div>
+          <div data-hf-id="hf-ng93" style="font-size:18px;color:#64748b">R² Score</div>
+          <div data-hf-id="hf-5dzo" style="font-size:14px;color:#64748b;margin-top:12px">CV: 0.928 ± 0.042</div>
+        </div>
+
+        <!-- XGB -->
+        <div data-hf-id="hf-co21" id="s4-model3" style="flex:1;background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:32px;opacity:0;text-align:center">
+          <div data-hf-id="hf-thth" style="font-size:16px;color:#64748b;letter-spacing:2px;margin-bottom:8px">XGBOOST</div>
+          <div data-hf-id="hf-fahf" id="s4-r2-3" style="font-size:72px;font-weight:900;color:#94a3b8;line-height:1">.000</div>
+          <div data-hf-id="hf-wix8" style="font-size:18px;color:#475569">R² Score</div>
+          <div data-hf-id="hf-kdaa" style="font-size:14px;color:#64748b;margin-top:12px">CV: 0.915 ± 0.044</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio data-hf-id="hf-55tw" id="s4-audio" data-start="40" data-duration="16" data-track-index="2" data-volume="1.0" src="assets/scene4_narration.mp3"></audio>
+
+  <!-- ═══════════════════════════════════════════
+       SCENE 5: FEATURE IMPORTANCE (56-74s)
+       ═══════════════════════════════════════════ -->
+
+  <div data-hf-id="hf-6jkq" id="s5-container" class="clip" data-start="56" data-duration="18" data-track-index="61" style="position:absolute;inset:0;display:flex;align-items:center;padding:0 120px;opacity:0">
+
+    <div data-hf-id="hf-coav" style="flex:1">
+      <div data-hf-id="hf-xhxt" style="font-size:20px;color:#64748b;letter-spacing:4px;margin-bottom:12px">FEATURE IMPORTANCE</div>
+      <h2 data-hf-id="hf-6i64" style="font-size:56px;font-weight:900;color:#ffffff;margin-bottom:60px;letter-spacing:2px">
+        特徵<span data-hf-id="hf-7qwy" style="color:#f59e0b"> 重要性</span>排名
+      </h2>
+
+      <!-- Horizontal bar chart with SVG-style CSS bars -->
+      <div data-hf-id="hf-5dr0" style="display:flex;flex-direction:column;gap:28px;max-width:1200px">
+        <div data-hf-id="hf-vren" id="s5-fi1" style="opacity:0">
+          <div data-hf-id="hf-ljd7" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span data-hf-id="hf-pk8p" style="font-size:24px;font-weight:700;color:#f59e0b">R&amp;D Spend</span>
+            <span data-hf-id="hf-75b4" style="font-size:28px;font-weight:900;color:#f59e0b">92.03%</span>
+          </div>
+          <div data-hf-id="hf-8vem" style="height:10px;width:100%;background:#1e293b;border-radius:5px;overflow:hidden">
+            <div data-hf-id="hf-kya4" id="s5-fi1-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#f59e0b,#fbbf24);border-radius:5px"></div>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-jml8" id="s5-fi2" style="opacity:0">
+          <div data-hf-id="hf-s2i3" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span data-hf-id="hf-mr4z" style="font-size:24px;font-weight:700;color:#3b82f6">Marketing Spend</span>
+            <span data-hf-id="hf-p0j1" style="font-size:28px;font-weight:900;color:#3b82f6">4.81%</span>
+          </div>
+          <div data-hf-id="hf-8lgb" style="height:8px;width:100%;background:#1e293b;border-radius:4px;overflow:hidden">
+            <div data-hf-id="hf-6g2r" id="s5-fi2-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#3b82f6,#60a5fa);border-radius:4px"></div>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-2yb1" id="s5-fi3" style="opacity:0">
+          <div data-hf-id="hf-ro72" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span data-hf-id="hf-g7x3" style="font-size:24px;font-weight:700;color:#10b981">Administration</span>
+            <span data-hf-id="hf-0x3f" style="font-size:28px;font-weight:900;color:#10b981">1.88%</span>
+          </div>
+          <div data-hf-id="hf-0d4t" style="height:6px;width:100%;background:#1e293b;border-radius:3px;overflow:hidden">
+            <div data-hf-id="hf-m9dg" id="s5-fi3-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#10b981,#34d399);border-radius:3px"></div>
+          </div>
+        </div>
+
+        <div data-hf-id="hf-dluq" id="s5-fi4" style="opacity:0">
+          <div data-hf-id="hf-r9w1" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <span data-hf-id="hf-rh2q" style="font-size:20px;font-weight:700;color:#475569">State (NY + FL)</span>
+            <span data-hf-id="hf-59mr" style="font-size:24px;font-weight:900;color:#475569">1.27%</span>
+          </div>
+          <div data-hf-id="hf-cbde" style="height:4px;width:100%;background:#1e293b;border-radius:2px;overflow:hidden">
+            <div data-hf-id="hf-jlqo" id="s5-fi4-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#475569,#64748b);border-radius:2px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dominance annotation -->
+    <div data-hf-id="hf-iq5r" id="s5-dominance" style="flex:0 0 420px;text-align:right;opacity:0">
+      <div data-hf-id="hf-xnpn" style="font-size:140px;font-weight:900;color:#f59e0b;line-height:1">92%</div>
+      <div data-hf-id="hf-1yj8" style="font-size:24px;color:#94a3b8;letter-spacing:2px">
+        差距懸殊<br data-hf-id="hf-rsrt">無可辯駁
+      </div>
+    </div>
+  </div>
+
+  <audio data-hf-id="hf-8p6p" id="s5-audio" data-start="56" data-duration="18" data-track-index="2" data-volume="1.0" src="assets/scene5_narration.mp3"></audio>
+
+  <!-- ═══════════════════════════════════════════
+       SCENE 6: EXPERT VOTING (74-92s)
+       ═══════════════════════════════════════════ -->
+
+  <div data-hf-id="hf-pubj" id="s6-container" class="clip" data-start="74" data-duration="18" data-track-index="62" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0">
+
+    <div data-hf-id="hf-cxaq" style="font-size:20px;color:#64748b;letter-spacing:4px;margin-bottom:12px">EXPERT CONSENSUS</div>
+    <h2 data-hf-id="hf-bdtv" style="font-size:56px;font-weight:900;color:#ffffff;margin-bottom:16px;letter-spacing:2px">
+      五位專家<span data-hf-id="hf-9zp2" style="color:#f59e0b"> 全數投票</span>
+    </h2>
+    <p data-hf-id="hf-5g1d" style="font-size:28px;color:#94a3b8;margin-bottom:70px">R&amp;D 為首要獲利驅動因素</p>
+
+    <!-- Expert vote cards row -->
+    <div data-hf-id="hf-6i9o" style="display:flex;gap:24px;margin-bottom:60px">
+      <div data-hf-id="hf-49si" id="s6-v1" style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:24px 32px;text-align:center;min-width:180px;opacity:0">
+        <div data-hf-id="hf-gbkt" style="font-size:14px;color:#64748b;letter-spacing:2px;margin-bottom:8px">研發總監</div>
+        <div data-hf-id="hf-xxf0" style="font-size:48px;font-weight:900;color:#f59e0b">92%</div>
+        <div data-hf-id="hf-92ob" style="font-size:14px;color:#475569;margin-top:4px">信心度</div>
+      </div>
+      <div data-hf-id="hf-zclj" id="s6-v2" style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:24px 32px;text-align:center;min-width:180px;opacity:0">
+        <div data-hf-id="hf-legs" style="font-size:14px;color:#64748b;letter-spacing:2px;margin-bottom:8px">行銷總監</div>
+        <div data-hf-id="hf-lofx" style="font-size:48px;font-weight:900;color:#3b82f6">✓</div>
+        <div data-hf-id="hf-onqf" style="font-size:14px;color:#475569;margin-top:4px">認同 R&amp;D 主導</div>
+      </div>
+      <div data-hf-id="hf-eri0" id="s6-v3" style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:24px 32px;text-align:center;min-width:180px;opacity:0">
+        <div data-hf-id="hf-blic" style="font-size:14px;color:#64748b;letter-spacing:2px;margin-bottom:8px">行政總監</div>
+        <div data-hf-id="hf-dhk9" style="font-size:48px;font-weight:900;color:#10b981">✓</div>
+        <div data-hf-id="hf-y20c" style="font-size:14px;color:#475569;margin-top:4px">接受數據事實</div>
+      </div>
+      <div data-hf-id="hf-1xxx" id="s6-v4" style="background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:24px 32px;text-align:center;min-width:180px;opacity:0">
+        <div data-hf-id="hf-ah5q" style="font-size:14px;color:#64748b;letter-spacing:2px;margin-bottom:8px">州長</div>
+        <div data-hf-id="hf-dqc4" style="font-size:48px;font-weight:900;color:#8b5cf6">✓</div>
+        <div data-hf-id="hf-1ip7" style="font-size:14px;color:#475569;margin-top:4px">同意優先順序</div>
+      </div>
+      <div data-hf-id="hf-3ntt" id="s6-v5" style="background:#0f172a;border:1px solid #f59e0b;border-radius:12px;padding:24px 32px;text-align:center;min-width:180px;opacity:0">
+        <div data-hf-id="hf-o39u" style="font-size:14px;color:#64748b;letter-spacing:2px;margin-bottom:8px">ML 專家</div>
+        <div data-hf-id="hf-pl4l" style="font-size:48px;font-weight:900;color:#ef4444">✓</div>
+        <div data-hf-id="hf-vao7" style="font-size:14px;color:#475569;margin-top:4px">證據充分</div>
+      </div>
+    </div>
+  </div>
+
+  <audio data-hf-id="hf-zi31" id="s6-audio" data-start="74" data-duration="18" data-track-index="2" data-volume="1.0" src="assets/scene6_narration.mp3"></audio>
+
+  <!-- ═══════════════════════════════════════════
+       SCENE 7: BUDGET RECOMMENDATION (92-110s)
+       ═══════════════════════════════════════════ -->
+
+  <div data-hf-id="hf-5ccy" id="s7-container" class="clip" data-start="92" data-duration="18" data-track-index="63" style="position:absolute;inset:0;display:flex;align-items:center;padding:0 120px;opacity:0">
+
+    <div data-hf-id="hf-c9zu" style="flex:1">
+      <div data-hf-id="hf-5z7v" style="font-size:20px;color:#64748b;letter-spacing:4px;margin-bottom:12px">BUDGET RECOMMENDATION</div>
+      <h2 data-hf-id="hf-vhl1" style="font-size:56px;font-weight:900;color:#ffffff;margin-bottom:50px;letter-spacing:2px">
+        資源配置 <span data-hf-id="hf-gaew" style="color:#f59e0b">最佳化</span>方案
+      </h2>
+
+      <!-- Budget breakdown -->
+      <div data-hf-id="hf-a8l5" style="display:flex;flex-direction:column;gap:20px">
+        <div data-hf-id="hf-2ukl" id="s7-b1" style="display:flex;align-items:center;gap:24px;opacity:0">
+          <div data-hf-id="hf-kf0g" style="width:24px;height:24px;background:#f59e0b;border-radius:4px;flex-shrink:0"></div>
+          <div data-hf-id="hf-3qid" style="font-size:28px;font-weight:700;color:#f59e0b;width:80px">R&amp;D</div>
+          <div data-hf-id="hf-2nnw" id="s7-b1-bar" style="flex:1;height:14px;background:#1e293b;border-radius:7px;overflow:hidden">
+            <div data-hf-id="hf-2g2v" id="s7-b1-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#f59e0b,#fbbf24);border-radius:7px"></div>
+          </div>
+          <div data-hf-id="hf-7h2q" id="s7-b1-val" style="font-size:36px;font-weight:900;color:#f59e0b;min-width:80px;text-align:right">0%</div>
+        </div>
+        <div data-hf-id="hf-rt50" id="s7-b2" style="display:flex;align-items:center;gap:24px;opacity:0">
+          <div data-hf-id="hf-d4ka" style="width:24px;height:24px;background:#3b82f6;border-radius:4px;flex-shrink:0"></div>
+          <div data-hf-id="hf-jrnf" style="font-size:28px;font-weight:700;color:#3b82f6;width:80px">Marketing</div>
+          <div data-hf-id="hf-z0gf" id="s7-b2-bar" style="flex:1;height:14px;background:#1e293b;border-radius:7px;overflow:hidden">
+            <div data-hf-id="hf-idxd" id="s7-b2-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#3b82f6,#60a5fa);border-radius:7px"></div>
+          </div>
+          <div data-hf-id="hf-yps9" id="s7-b2-val" style="font-size:36px;font-weight:900;color:#3b82f6;min-width:80px;text-align:right">0%</div>
+        </div>
+        <div data-hf-id="hf-7imn" id="s7-b3" style="display:flex;align-items:center;gap:24px;opacity:0">
+          <div data-hf-id="hf-4zda" style="width:24px;height:24px;background:#10b981;border-radius:4px;flex-shrink:0"></div>
+          <div data-hf-id="hf-9c7o" style="font-size:28px;font-weight:700;color:#10b981;width:80px">Admin</div>
+          <div data-hf-id="hf-47f2" id="s7-b3-bar" style="flex:1;height:14px;background:#1e293b;border-radius:7px;overflow:hidden">
+            <div data-hf-id="hf-3q7d" id="s7-b3-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#10b981,#34d399);border-radius:7px"></div>
+          </div>
+          <div data-hf-id="hf-2lcm" id="s7-b3-val" style="font-size:36px;font-weight:900;color:#10b981;min-width:80px;text-align:right">0%</div>
+        </div>
+        <div data-hf-id="hf-km8m" id="s7-b4" style="display:flex;align-items:center;gap:24px;opacity:0">
+          <div data-hf-id="hf-5rvl" style="width:24px;height:24px;background:#475569;border-radius:4px;flex-shrink:0"></div>
+          <div data-hf-id="hf-ayt4" style="font-size:28px;font-weight:700;color:#475569;width:80px">Reserve</div>
+          <div data-hf-id="hf-e7ax" id="s7-b4-bar" style="flex:1;height:14px;background:#1e293b;border-radius:7px;overflow:hidden">
+            <div data-hf-id="hf-bbo4" id="s7-b4-fill" style="height:100%;width:0%;background:linear-gradient(90deg,#475569,#64748b);border-radius:7px"></div>
+          </div>
+          <div data-hf-id="hf-ftzo" id="s7-b4-val" style="font-size:36px;font-weight:900;color:#475569;min-width:80px;text-align:right">0%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Big 60% callout -->
+    <div data-hf-id="hf-2x0p" id="s7-callout" style="flex:0 0 420px;text-align:right;opacity:0">
+      <div data-hf-id="hf-wnos" style="font-size:180px;font-weight:900;color:#f59e0b;line-height:1">60%</div>
+      <div data-hf-id="hf-4nkz" style="font-size:28px;color:#94a3b8;letter-spacing:2px">R&amp;D 最優先</div>
+    </div>
+  </div>
+
+  <audio data-hf-id="hf-5yih" id="s7-audio" data-start="92" data-duration="18" data-track-index="2" data-volume="1.0" src="assets/scene7_narration.mp3"></audio>
+
+  <!-- ═══════════════════════════════════════════
+       SCENE 8: CLOSING (110-120s)
+       ═══════════════════════════════════════════ -->
+
+  <div data-hf-id="hf-ab4o" id="s8-container" class="clip" data-start="110" data-duration="10" data-track-index="64" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0">
+
+    <div data-hf-id="hf-vbnp" id="s8-line" style="width:0;height:2px;background:#f59e0b;opacity:0.6;margin-bottom:40px"></div>
+    <h2 data-hf-id="hf-6yhk" id="s8-title" style="font-size:100px;font-weight:900;color:#ffffff;letter-spacing:8px">
+      R&amp;D is <span data-hf-id="hf-qc1c" style="color:#f59e0b">King</span>
+    </h2>
+    <p data-hf-id="hf-apgc" id="s8-sub" style="font-size:32px;color:#94a3b8;opacity:0;letter-spacing:4px;margin-top:30px">
+      數據驅動 科學決策
+    </p>
+
+    <!-- Bottom info bar -->
+    <div data-hf-id="hf-2y3y" id="s8-footer" style="position:absolute;bottom:80px;opacity:0">
+      <span data-hf-id="hf-0n7i" style="color:#475569;font-size:20px;letter-spacing:2px">
+        CRISP-DM Framework · NCHU · 2026
+      </span>
+    </div>
+  </div>
+
+  <audio data-hf-id="hf-bpdi" id="s8-audio" data-start="110" data-duration="10" data-track-index="2" data-volume="1.0" src="assets/scene8_narration.mp3"></audio>
+
+</div><!-- /#root -->
+
+<!-- ═══════════════════════════════════════════
+     GSAP TIMELINE
+     ═══════════════════════════════════════════ -->
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+// ── SCENE 1: Title Intro (0-12s) ──
+tl.to("#bg-gradient", { opacity: 1, duration: 0.8, ease: "power2.out" }, 0);
+tl.to("#bg-grid", { opacity: 0.06, duration: 0.5, ease: "power2.out" }, 0.2);
+tl.to("#s1-tl", { opacity: 1, width: 120, duration: 0.6, ease: "power2.out" }, 0.3);
+tl.to("#s1-tr", { opacity: 1, height: 60, duration: 0.6, ease: "power2.out" }, 0.4);
+tl.fromTo("#s1-title", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1.0, ease: "power3.out" }, 0.6);
+tl.fromTo("#s1-sub", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 1.4);
+tl.fromTo("#s1-experts", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 2.0);
+tl.to("#s1-container", { opacity: 0, duration: 0.5, ease: "power2.in" }, 11.5);
+tl.set("#s1-container", { opacity: 0 }, 12);
+
+// ── SCENE 2: Business Context (12-24s) ──
+tl.set("#s2-container", { opacity: 0 }, 12);
+tl.to("#s2-container", { opacity: 1, duration: 0.5, ease: "power2.out" }, 12.2);
+tl.to("#s2-card1", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 12.5);
+tl.to("#s2-card2", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 12.8);
+tl.to("#s2-card3", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 13.1);
+tl.to("#s2-card4", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 13.4);
+tl.to("#s2-card5", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 13.7);
+tl.to("#s2-container", { opacity: 0, duration: 0.5, ease: "power2.in" }, 23.5);
+tl.set("#s2-container", { opacity: 0 }, 24);
+
+// ── SCENE 3: EDA Correlation (24-40s) ──
+tl.set("#s3-container", { opacity: 0 }, 24);
+tl.to("#s3-container", { opacity: 1, duration: 0.5, ease: "power2.out" }, 24.2);
+tl.to("#s3-bar1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 24.5);
+tl.to("#s3-bar1-fill", { width: "97%", duration: 1.2, ease: "power2.out" }, 24.6);
+var s3v1 = { v: 0 };
+tl.to(s3v1, { v: 0.9729, duration: 1.2, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s3-val1").textContent = s3v1.v.toFixed(4);
+}}, 24.6);
+tl.to("#s3-bar2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 25.0);
+tl.to("#s3-bar2-fill", { width: "75%", duration: 1.0, ease: "power2.out" }, 25.1);
+var s3v2 = { v: 0 };
+tl.to(s3v2, { v: 0.7478, duration: 1.0, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s3-val2").textContent = s3v2.v.toFixed(4);
+}}, 25.1);
+tl.to("#s3-bar3", { opacity: 1, duration: 0.3, ease: "power2.out" }, 26.0);
+tl.to("#s3-bar3-fill", { width: "20%", duration: 0.8, ease: "power2.out" }, 26.1);
+var s3v3 = { v: 0 };
+tl.to(s3v3, { v: 0.2007, duration: 0.8, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s3-val3").textContent = s3v3.v.toFixed(4);
+}}, 26.1);
+tl.to("#s3-bar4", { opacity: 1, duration: 0.3, ease: "power2.out" }, 27.0);
+tl.to("#s3-bar4-fill", { width: "5%", duration: 0.5, ease: "power2.out" }, 27.1);
+tl.fromTo("#s3-callout", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 27.5);
+tl.to("#s3-container", { opacity: 0, duration: 0.5, ease: "power2.in" }, 39.5);
+tl.set("#s3-container", { opacity: 0 }, 40);
+
+// ── SCENE 4: Model Comparison (40-56s) ──
+tl.set("#s4-container", { opacity: 0 }, 40);
+tl.to("#s4-container", { opacity: 1, duration: 0.5, ease: "power2.out" }, 40.2);
+tl.to("#s4-model1", { opacity: 1, duration: 0.4, ease: "power2.out" }, 40.4);
+tl.to("#s4-model2", { opacity: 1, duration: 0.4, ease: "power2.out" }, 40.6);
+tl.to("#s4-model3", { opacity: 1, duration: 0.4, ease: "power2.out" }, 40.8);
+var s4r1Obj = { v: 0 };
+tl.to(s4r1Obj, { v: 0.8987, duration: 1.0, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s4-r2-1").textContent = "." + Math.round(s4r1Obj.v * 10000).toString().padStart(4,'0');
+}}, 41.0);
+var s4r2Obj = { v: 0 };
+tl.to(s4r2Obj, { v: 0.9147, duration: 1.0, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s4-r2-2").textContent = "." + Math.round(s4r2Obj.v * 10000).toString().padStart(4,'0');
+}}, 41.2);
+var s4r3Obj = { v: 0 };
+tl.to(s4r3Obj, { v: 0.8828, duration: 1.0, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s4-r2-3").textContent = "." + Math.round(s4r3Obj.v * 10000).toString().padStart(4,'0');
+}}, 41.4);
+tl.to("#s4-container", { opacity: 0, duration: 0.5, ease: "power2.in" }, 55.5);
+tl.set("#s4-container", { opacity: 0 }, 56);
+
+// ── SCENE 5: Feature Importance (56-74s) ──
+tl.set("#s5-container", { opacity: 0 }, 56);
+tl.to("#s5-container", { opacity: 1, duration: 0.5, ease: "power2.out" }, 56.2);
+tl.to("#s5-fi1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 56.5);
+tl.to("#s5-fi1-fill", { width: "92%", duration: 1.5, ease: "power2.out" }, 56.6);
+tl.to("#s5-fi2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 57.0);
+tl.to("#s5-fi2-fill", { width: "5%", duration: 0.6, ease: "power2.out" }, 57.1);
+tl.to("#s5-fi3", { opacity: 1, duration: 0.3, ease: "power2.out" }, 57.5);
+tl.to("#s5-fi3-fill", { width: "2%", duration: 0.4, ease: "power2.out" }, 57.6);
+tl.to("#s5-fi4", { opacity: 1, duration: 0.3, ease: "power2.out" }, 58.0);
+tl.to("#s5-fi4-fill", { width: "1%", duration: 0.3, ease: "power2.out" }, 58.1);
+tl.fromTo("#s5-dominance", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 58.5);
+tl.to("#s5-container", { opacity: 0, duration: 0.5, ease: "power2.in" }, 73.5);
+tl.set("#s5-container", { opacity: 0 }, 74);
+
+// ── SCENE 6: Expert Voting (74-92s) ──
+tl.set("#s6-container", { opacity: 0 }, 74);
+tl.to("#s6-container", { opacity: 1, duration: 0.5, ease: "power2.out" }, 74.2);
+tl.to("#s6-v1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 74.5);
+tl.to("#s6-v2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 74.8);
+tl.to("#s6-v3", { opacity: 1, duration: 0.3, ease: "power2.out" }, 75.1);
+tl.to("#s6-v4", { opacity: 1, duration: 0.3, ease: "power2.out" }, 75.4);
+tl.to("#s6-v5", { opacity: 1, duration: 0.3, ease: "power2.out" }, 75.7);
+tl.to("#s6-container", { opacity: 0, duration: 0.5, ease: "power2.in" }, 91.5);
+tl.set("#s6-container", { opacity: 0 }, 92);
+
+// ── SCENE 7: Budget (92-110s) ──
+tl.set("#s7-container", { opacity: 0 }, 92);
+tl.to("#s7-container", { opacity: 1, duration: 0.5, ease: "power2.out" }, 92.2);
+tl.to("#s7-b1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 92.5);
+tl.to("#s7-b1-fill", { width: "60%", duration: 1.2, ease: "power2.out" }, 92.6);
+var s7b1Obj = { v: 0 };
+tl.to(s7b1Obj, { v: 60, duration: 1.2, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s7-b1-val").textContent = Math.round(s7b1Obj.v) + "%";
+}}, 92.6);
+tl.to("#s7-b2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 93.0);
+tl.to("#s7-b2-fill", { width: "25%", duration: 0.8, ease: "power2.out" }, 93.1);
+var s7b2Obj = { v: 0 };
+tl.to(s7b2Obj, { v: 25, duration: 0.8, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s7-b2-val").textContent = Math.round(s7b2Obj.v) + "%";
+}}, 93.1);
+tl.to("#s7-b3", { opacity: 1, duration: 0.3, ease: "power2.out" }, 93.5);
+tl.to("#s7-b3-fill", { width: "10%", duration: 0.5, ease: "power2.out" }, 93.6);
+var s7b3Obj = { v: 0 };
+tl.to(s7b3Obj, { v: 10, duration: 0.5, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s7-b3-val").textContent = Math.round(s7b3Obj.v) + "%";
+}}, 93.6);
+tl.to("#s7-b4", { opacity: 1, duration: 0.3, ease: "power2.out" }, 94.0);
+tl.to("#s7-b4-fill", { width: "5%", duration: 0.3, ease: "power2.out" }, 94.1);
+var s7b4Obj = { v: 0 };
+tl.to(s7b4Obj, { v: 5, duration: 0.3, ease: "power2.out", onUpdate: function() {
+  document.getElementById("s7-b4-val").textContent = Math.round(s7b4Obj.v) + "%";
+}}, 94.1);
+tl.fromTo("#s7-callout", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 94.5);
+tl.to("#s7-container", { opacity: 0, duration: 0.5, ease: "power2.in" }, 109.5);
+tl.set("#s7-container", { opacity: 0 }, 110);
+
+// ── SCENE 8: Closing (110-120s) ──
+tl.set("#s8-container", { opacity: 0 }, 110);
+tl.to("#s8-container", { opacity: 1, duration: 0.5, ease: "power2.out" }, 110.2);
+tl.to("#s8-line", { width: 600, duration: 0.8, ease: "power2.out" }, 110.5);
+tl.fromTo("#s8-title", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1.0, ease: "power3.out" }, 111.0);
+tl.to("#s8-sub", { opacity: 1, duration: 0.8, ease: "power2.out" }, 112.0);
+tl.to("#s8-footer", { opacity: 1, duration: 0.8, ease: "power2.out" }, 112.5);
+tl.to("#bg-gradient", { opacity: 0, duration: 0.5, ease: "power2.in" }, 119.5);
+
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

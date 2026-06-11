@@ -9,6 +9,12 @@
 
 ![Workflow](output/workflow.png)
 
+### 成果展示影片
+
+<video src="output/crisp_dm_video.mp4" controls width="100%"></video>
+
+[▸ 下載 MP4](https://github.com/activita159/nchu-0611-50startups-crisp-dm/raw/master/output/crisp_dm_video.mp4)
+
 ---
 
 ## 專案概述
@@ -55,6 +61,7 @@
     ├── CRISP_DM_Report.md       # 完整 CRISP-DM 報告（六階段）
     ├── discussion_transcript.txt # 專家討論逐字稿
     ├── workflow.png             # 流程圖
+    ├── crisp_dm_video.mp4       # 成果展示影片（2 分鐘）
     ├── figures/                 # 11 張視覺化圖表（PNG）
     └── models/                  # 3 個已訓練模型（Pickle）
 ```
@@ -105,6 +112,7 @@ python generate_workflow.py
 | **機器學習** | scikit-learn, xgboost |
 | **統計檢定** | scipy |
 | **組態管理** | pyyaml |
+| **動畫影片** | HyperFrames (HeyGen) + GSAP + edge-tts |
 
 ### 使用的模型
 
