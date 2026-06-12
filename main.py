@@ -104,6 +104,14 @@ def main():
         print("\n[Forward Selection] LR metrics by number of features:")
         print(fs_df.to_string(index=False))
 
+        # ── Multi-Algorithm Feature Selection Comparison ──
+        print_section("Multi-Algorithm Feature Selection Comparison")
+        comp_df, rank_table = modeler.multi_algorithm_feature_selection(figures_dir=FIGURES_DIR)
+        print("\n[Multi-Algo FS] Comparison Summary:")
+        print(comp_df.to_string(index=False))
+        print("\n[Multi-Algo FS] Feature Rankings:")
+        print(rank_table.to_string())
+
         log.write("=== 模型評估摘要 ===\n")
         log.write(eval_summary.to_string(index=False) + "\n\n")
         log.write("=== 特徵重要性綜合排名 ===\n")
