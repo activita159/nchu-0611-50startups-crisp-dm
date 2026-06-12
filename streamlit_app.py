@@ -123,6 +123,11 @@ simulating a **5-expert, 5-round discussion** to identify factors driving **Prof
     if os.path.exists(workflow_path):
         st.image(workflow_path, width='stretch')
 
+    st.subheader("Demo Video")
+    video_path = os.path.join(OUTPUT_DIR, "crisp_dm_video.mp4")
+    if os.path.exists(video_path):
+        st.video(video_path)
+
 
 def render_eda(data):
     st.header("Phase 1 & 2: Exploratory Data Analysis")
