@@ -3,6 +3,8 @@
 > **Version**: 1.1  
 > **Goal**: 以五位領域專家多輪討論結合 CRISP-DM 六階段方法論，分析 50 Startups 資料集，識別影響利潤（Profit）的主要驅動因素，並提出資源配置建議。
 
+demo page:https://nchu-0611-50startups-crisp-dm-zeug3df8wca9nhn89xafbe.streamlit.app/
+
 ---
 
 ![Poster](poster.png)
