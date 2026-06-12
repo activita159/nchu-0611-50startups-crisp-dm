@@ -95,6 +95,7 @@ class EDA:
         fig.tight_layout()
         fig.savefig(os.path.join(self.output_dir, "correlation_heatmap.png"), dpi=150)
         plt.close(fig)
+        return fig
 
     def distribution_analysis(self):
         numeric_cols = self.df.select_dtypes(include=[np.number]).columns
@@ -118,6 +119,7 @@ class EDA:
         fig.tight_layout()
         fig.savefig(os.path.join(self.output_dir, "distribution_analysis.png"), dpi=150)
         plt.close(fig)
+        return fig
 
     def boxplot_by_state(self):
         numeric_cols = self.df.select_dtypes(include=[np.number]).columns
@@ -137,6 +139,7 @@ class EDA:
         fig.tight_layout()
         fig.savefig(os.path.join(self.output_dir, "boxplot_by_state.png"), dpi=150)
         plt.close(fig)
+        return fig
 
     def scatter_plots_vs_profit(self):
         predictors = ["R&D Spend", "Administration", "Marketing Spend"]
@@ -162,6 +165,7 @@ class EDA:
         fig.tight_layout()
         fig.savefig(os.path.join(self.output_dir, "scatter_vs_profit.png"), dpi=150)
         plt.close(fig)
+        return fig
 
     def residual_plots(self, y_true: np.ndarray, y_pred: np.ndarray, model_name: str):
         residuals = y_true - y_pred
@@ -180,6 +184,7 @@ class EDA:
         fig.tight_layout()
         fig.savefig(os.path.join(self.output_dir, f"residual_{model_name}.png"), dpi=150)
         plt.close(fig)
+        return fig
 
     def feature_importance_plot(self, importance: dict, model_name: str):
         sorted_items = sorted(importance.items(), key=lambda x: x[1])
@@ -195,6 +200,7 @@ class EDA:
         fig.tight_layout()
         fig.savefig(os.path.join(self.output_dir, f"feature_importance_{model_name}.png"), dpi=150)
         plt.close(fig)
+        return fig
 
     def forward_selection_analysis(self, X_train, X_test, y_train, y_test,
                                     feature_order: list) -> pd.DataFrame:
@@ -254,7 +260,7 @@ class EDA:
         fig.savefig(os.path.join(self.output_dir, "forward_selection_metrics.png"), dpi=150)
         plt.close(fig)
 
-        return df_steps
+        return df_steps, fig
 
     def run_all(self):
         results = {}

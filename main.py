@@ -96,7 +96,7 @@ def main():
         # ── Forward Feature Selection ──
         print_section("Forward Feature Selection (Linear Regression)")
         feature_order = [r["Feature"] for _, r in ranking.iterrows()]
-        fs_df = eda.forward_selection_analysis(
+        fs_df, _ = eda.forward_selection_analysis(
             modeler.X_train, modeler.X_test,
             modeler.y_train, modeler.y_test,
             feature_order,
@@ -106,7 +106,7 @@ def main():
 
         # ── Multi-Algorithm Feature Selection Comparison ──
         print_section("Multi-Algorithm Feature Selection Comparison")
-        comp_df, rank_table = modeler.multi_algorithm_feature_selection(figures_dir=FIGURES_DIR)
+        comp_df, rank_table, _ = modeler.multi_algorithm_feature_selection(figures_dir=FIGURES_DIR)
         print("\n[Multi-Algo FS] Comparison Summary:")
         print(comp_df.to_string(index=False))
         print("\n[Multi-Algo FS] Feature Rankings:")

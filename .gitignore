@@ -1,9 +1,9 @@
 __pycache__/
 *.pyc
 *.pyo
-.DS_Store
-video/renders/
-video/.thumbnails/
-video/ffmpeg.exe
-.agents/
-skills-lock.json
+.streamlit/cache/
+output/
+*.pkl
+.env
+.venv/
+venv/

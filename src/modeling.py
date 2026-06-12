@@ -270,9 +270,9 @@ class MLModeling:
         ranking_table.columns = [f"Rank {i+1}" for i in range(n_features)]
         ranking_table.index.name = "Algorithm"
 
-        self._plot_multi_algorithm_comparison(results, rankings, figures_dir)
+        fig = self._plot_multi_algorithm_comparison(results, rankings, figures_dir)
 
-        return comparison_df, ranking_table
+        return comparison_df, ranking_table, fig
 
     def _sfs_forward(self, X, y, k):
         if k >= len(X.columns):
@@ -387,3 +387,4 @@ class MLModeling:
 
         fig.savefig(os.path.join(figures_dir, "multi_algorithm_feature_selection.png"), dpi=150, bbox_inches="tight")
         plt.close(fig)
+        return fig
